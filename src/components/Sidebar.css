@@ -1,0 +1,191 @@
+.sidebar {
+  width: 320px;
+  height: 100vh;
+  background: var(--sber-white);
+  border-right: 1px solid var(--sber-border);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.sidebar-header {
+  padding: 20px;
+  border-bottom: 1px solid var(--sber-border-light);
+  background: linear-gradient(135deg, var(--sber-green) 0%, var(--sber-green-hover) 100%);
+  color: var(--sber-white);
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.logo-circle {
+  width: 40px;
+  height: 40px;
+  background: var(--sber-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-circle span {
+  color: var(--sber-green);
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.sidebar-logo h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.new-dialog-btn {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: var(--sber-white);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+}
+
+.new-dialog-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.new-dialog-btn span {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.dialogs-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+.empty-dialogs {
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--sber-gray);
+}
+
+.empty-dialogs p {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 8px 0;
+}
+
+.empty-dialogs span {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.dialog-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  margin: 4px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.dialog-item:hover {
+  background: var(--sber-gray-light);
+}
+
+.dialog-item.active {
+  background: var(--sber-green-light);
+  border-left: 3px solid var(--sber-green);
+}
+
+.dialog-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.dialog-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--sber-gray-dark);
+  margin: 0 0 4px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dialog-preview {
+  font-size: 13px;
+  color: var(--sber-gray);
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.dialog-time {
+  font-size: 11px;
+  color: var(--sber-gray);
+  opacity: 0.7;
+}
+
+.delete-dialog-btn {
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  color: var(--sber-gray);
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  opacity: 0;
+}
+
+.dialog-item:hover .delete-dialog-btn {
+  opacity: 1;
+}
+
+.delete-dialog-btn:hover {
+  background: var(--sber-red);
+  color: var(--sber-white);
+}
+
+/* Скроллбар */
+.dialogs-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.dialogs-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dialogs-list::-webkit-scrollbar-thumb {
+  background: var(--sber-border);
+  border-radius: 2px;
+}
+
+.dialogs-list::-webkit-scrollbar-thumb:hover {
+  background: var(--sber-gray);
+} 
